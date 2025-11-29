@@ -12,7 +12,7 @@ public class PlayerInteraction : MonoBehaviour
         var target =Physics2D.OverlapBox(transform.position, _interactionArea,0,
             LayerMask.GetMask("Interactable"));
         
-        if (_currentTarget == null && target)
+        if (!_currentTarget && target)
         {
             _currentTarget = target.GetComponent<Interactable>();
             _interactionText.gameObject.SetActive(true);
@@ -33,6 +33,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawCube(transform.position, _interactionArea);
+        Gizmos.DrawWireCube(transform.position, _interactionArea);
     }
 }

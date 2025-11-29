@@ -124,5 +124,10 @@ public class PlayerMovement : MonoBehaviour
       Gizmos.DrawWireCube(point, _groundCheckBox);
    }
 
+   public void Stop()
+   {
+      _rigidbody2D.linearVelocity = Vector2.zero;
+      _animator.SetBool("Run",false);
+   }
    public bool IsFacingRight() => _isFacingRight;
 }

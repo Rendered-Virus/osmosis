@@ -57,6 +57,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
       if(success)
          onSuccess?.Invoke();
       _onDialogueEnd?.Invoke();
+      dialogue.onDialogueEnd?.Invoke();
       
       _playing = false;
    }
@@ -67,7 +68,9 @@ public class Dialogue
 {
    [TextArea] public string[] lines;
    public bool hasCondition;
-   [ShowIf("hasCondition")] public string condition;
+   public bool hasEvent;
+   [ShowIf("hasCondition")] public int condition;
    [ShowIf("hasCondition")] [TextArea] public string[] linesIfNotCondition;
+   [ShowIf("hasEvent")]public UnityEvent onDialogueEnd;
 }
 
