@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class DialogueConditions : Singleton<DialogueConditions>
@@ -10,6 +11,7 @@ public class DialogueConditions : Singleton<DialogueConditions>
             ResetConditions();
     }
 
+    [Button("Reset Conditions")]
     private void ResetConditions()
     {
         PlayerPrefs.DeleteAll();

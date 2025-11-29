@@ -20,7 +20,7 @@ public class DialogueSpeaker : MonoBehaviour
         var data = SaveDataManager.Instance.LoadData();
         if (data != null)
         {
-            if(data.dialogueIndices.Length - 1 <= _speakerID)
+            if(data.dialogueIndices.Length - 1 > _speakerID)
                 currentDialogueIndex = data.dialogueIndices[_speakerID];
         }
     }

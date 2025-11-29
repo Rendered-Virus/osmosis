@@ -21,7 +21,9 @@ public class PogoBoss : MonoBehaviour
    [SerializeField] private float _postJumpDelay;
    private int _currentJumpIndex = 2;
    [SerializeField] private UnityEvent _onDeath;
-
+   private bool _isFighting;
+   private bool _isDead;
+   
    private void Start()
    {
       GameManager.Instance.OnRespawn.AddListener(BeginFighting);
@@ -29,10 +31,13 @@ public class PogoBoss : MonoBehaviour
 
    public void BeginSpeaking()
    {
+      _isFighting = true;
       GetComponent<DialogueSpeaker>().PlayDialogue();
    }
    public void BeginFighting()
    {
+      if(!_isFighting || _isDead)return;
+      
       _timeToAttack = _timeBetweenAttacks;
       StartCoroutine(JumpLoop());
    }
@@ -80,7 +85,7 @@ public class PogoBoss : MonoBehaviour
          {
             if (transform.position.y < 1)
             {
-               print("dead");
+               _isDead = true;
                GameManager.Instance.BossDead();
                _onDeath?.Invoke();
                return;
