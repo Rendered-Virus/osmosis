@@ -12,7 +12,10 @@ public class Alien : MonoBehaviour
     
     private void Start()
     {
-        var index = SaveDataManager.Instance.LoadData().dialogueIndices[GetComponentInChildren<DialogueSpeaker>().speakerID];
+        var data = SaveDataManager.Instance.LoadData();
+        if(data == null) return;
+        
+        var index = data.dialogueIndices[GetComponentInChildren<DialogueSpeaker>().speakerID];
         if (index == 2)
         {
             Destroy(gameObject);
