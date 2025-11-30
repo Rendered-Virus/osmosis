@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DialogueSpeaker : MonoBehaviour
 {
-    [SerializeField] private int _speakerID;
+    public int  speakerID;
     public Dialogue[] dialogues;
     public int currentDialogueIndex;
 
@@ -20,8 +20,8 @@ public class DialogueSpeaker : MonoBehaviour
         var data = SaveDataManager.Instance.LoadData();
         if (data != null)
         {
-            if(data.dialogueIndices.Length - 1 > _speakerID)
-                currentDialogueIndex = data.dialogueIndices[_speakerID];
+            if(data.dialogueIndices.Length - 1 > speakerID)
+                currentDialogueIndex = data.dialogueIndices[speakerID];
         }
     }
 
