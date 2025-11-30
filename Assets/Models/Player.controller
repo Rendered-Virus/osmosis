@@ -538,7 +538,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: metarig|Run
-  m_Speed: 1.7
+  m_Speed: 2.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3747421508505421619}
@@ -552,7 +552,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 2933577835342229695, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+  m_Motion: {fileID: 3825859802566639737, guid: 73433d52da180da459256930c6eb57f2, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
