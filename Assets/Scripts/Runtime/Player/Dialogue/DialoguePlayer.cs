@@ -53,13 +53,13 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
          yield return new WaitUntil(()=> Input.GetKeyDown(KeyCode.Space));
       }
       _textBox.gameObject.SetActive(false);
+      _onDialogueEnd?.Invoke();
 
       if (success)
       {
          onSuccess?.Invoke();
          dialogue.onDialogueEnd?.Invoke();
       }
-      _onDialogueEnd?.Invoke();
       
       _playing = false;
    }

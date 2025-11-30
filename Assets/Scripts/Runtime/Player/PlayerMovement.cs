@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
    private float _currentSpeed;
    private bool _jumpedOnce;
    private bool _isFacingRight;
+   private Vector2 _externalVelocity;
 
    private void Awake()
    {
@@ -110,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
       _currentSpeed = _isGrounded ? _speed : _midAirSpeed;
       _facingRight = x >= 0;
       _rigidbody2D.AddForceX(_currentSpeed * x * Time.fixedDeltaTime,ForceMode2D.Impulse);
-      
+      _rigidbody2D.position += _externalVelocity;   
       if (x != 0)
          _isFacingRight = _facingRight;
    }
@@ -135,4 +136,9 @@ public class PlayerMovement : MonoBehaviour
       _jumpCount = maxJumps;
    }
    public bool IsFacingRight() => _isFacingRight;
+
+   public void SetVelocity(Vector2 velocity)
+   {
+      _externalVelocity = velocity;
+   }
 }

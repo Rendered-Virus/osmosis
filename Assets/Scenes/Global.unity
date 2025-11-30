@@ -5730,19 +5730,10 @@ MonoBehaviour:
     - Is that...
     - Thanks for saving my cat!!!
     hasCondition: 1
-    hasEvent: 0
+    hasEvent: 1
     condition: 1
     linesIfNotCondition:
     - My cat fell down the drains I hope he's alright :c
-    onDialogueEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - lines:
-    - Thanks for saving my cat!!
-    hasCondition: 0
-    hasEvent: 1
-    condition: 0
-    linesIfNotCondition: []
     onDialogueEnd:
       m_PersistentCalls:
         m_Calls:
@@ -5758,6 +5749,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7957826544768758158}
+          m_TargetAssemblyTypeName: PlayerHat, Assembly-CSharp
+          m_MethodName: RemoveHat
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - lines:
+    - Thanks for saving my cat!!
+    hasCondition: 0
+    hasEvent: 0
+    condition: 0
+    linesIfNotCondition: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls: []
   currentDialogueIndex: 0
 --- !u!114 &479510226
 MonoBehaviour:
@@ -5945,7 +5957,7 @@ Transform:
   m_GameObject: {fileID: 940449575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.39, y: 0, z: 2.53}
+  m_LocalPosition: {x: 10.14, y: 0, z: 2.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11296,7 +11308,7 @@ PrefabInstance:
     - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
       propertyPath: _dialogueSpeaker2
       value: 
-      objectReference: {fileID: 479510224}
+      objectReference: {fileID: 919132148149366654}
     - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
       propertyPath: _dialogueSpeaker3
       value: 
@@ -11433,7 +11445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76d82f33f33e4c4982733d788c8568a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speakerID: 2
+  _speakerID: 1
   dialogues:
   - lines:
     - With science ending, so is the internet so my billion doller company holds
@@ -12369,13 +12381,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6040273013906164661}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.57883394, y: -0.66696745, z: -0.40344054, w: -0.23946072}
-  m_LocalPosition: {x: -0.00012, y: 0.00266, z: 0.00155}
-  m_LocalScale: {x: 0.009999996, y: 0.010000001, z: 0.009999997}
+  m_LocalRotation: {x: 0.646821, y: -0.6069145, z: -0.2818422, w: -0.36584473}
+  m_LocalPosition: {x: 0.00214, y: 0.00206, z: 0.00232}
+  m_LocalScale: {x: 0.012262995, y: 0.012263001, z: 0.012262996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1684511228}
-  m_LocalEulerAnglesHint: {x: 0, y: -161.38, z: 0}
+  m_LocalEulerAnglesHint: {x: -54.625, y: -187.89, z: -89.567}
 --- !u!4 &7853055842616678800
 Transform:
   m_ObjectHideFlags: 0
@@ -12470,6 +12482,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0d50f17134b4cb46bf84383b32a0c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7957826544768758158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6845672805286389037, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+  m_PrefabInstance: {fileID: 7957826544768758153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28f73e6c6268a54096366b78ca74053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8241451352753458615

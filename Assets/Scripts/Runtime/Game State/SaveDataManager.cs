@@ -13,6 +13,7 @@ public class SaveDataManager : Singleton<SaveDataManager>
         PlayerPrefs.SetInt("dialogue3", data.dialogueIndices[2]);
         
         PlayerPrefs.SetInt("playerState",data.playerState);
+        PlayerPrefs.SetInt("hat", data.hat);
     }
     public GlobalData LoadData()
     {
@@ -29,6 +30,7 @@ public class SaveDataManager : Singleton<SaveDataManager>
                 PlayerPrefs.GetFloat("playerY"),
                 PlayerPrefs.GetFloat("playerZ")),
             
+            hat =  PlayerPrefs.GetInt("hat"),
             playerState = PlayerPrefs.GetInt("playerState")
         };
     }

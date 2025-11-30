@@ -17,6 +17,11 @@ public class PlayerState : MonoBehaviour
 
     private void Start()
     {
+        if (currentState != 0)
+        {
+            UpdateState();
+            return;
+        }
         var data = SaveDataManager.Instance.LoadData();
         if (data != null)
         {

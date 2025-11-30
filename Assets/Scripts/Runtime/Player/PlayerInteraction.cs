@@ -25,6 +25,14 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
+    public void DestroyInteractable(Interactable interactable)
+    {
+        if (_currentTarget == interactable)
+        {
+            _currentTarget = null;
+            _interactionText.gameObject.SetActive(false);
+        }
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && _currentTarget)

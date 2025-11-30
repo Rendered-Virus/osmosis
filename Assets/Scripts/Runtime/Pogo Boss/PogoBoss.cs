@@ -21,6 +21,8 @@ public class PogoBoss : MonoBehaviour
    [SerializeField] private float _postJumpDelay;
    private int _currentJumpIndex = 2;
    [SerializeField] private UnityEvent _onDeath;
+   [SerializeField] private GameObject _landParticles;
+   
    private bool _isFighting;
    private bool _isDead;
    
@@ -88,12 +90,14 @@ public class PogoBoss : MonoBehaviour
             {
                if(GameManager.Instance.playerDead)
                   return;
-               
+                 
                _isDead = true;
                GameManager.Instance.BossDead();
                _onDeath?.Invoke();
                return;
             }
+            Instantiate(_landParticles, transform.position, Quaternion.identity);
+            
             _timeToAttack = _timeBetweenAttacks;
             StartCoroutine(JumpLoop());
          });

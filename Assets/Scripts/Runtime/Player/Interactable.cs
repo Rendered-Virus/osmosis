@@ -8,6 +8,6 @@ public class Interactable : MonoBehaviour
   
   public void Interact()
   { 
-    OnInteract.Invoke();
+    OnInteract?.Invoke();
   }
 }

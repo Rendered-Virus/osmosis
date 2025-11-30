@@ -27,7 +27,7 @@ public class DialogueSpeaker : MonoBehaviour
 
     public void PlayDialogue()
     {
-        DialoguePlayer.Instance.PlayDialogue(dialogues[currentDialogueIndex],transform.position, ()=> NextDialogue());
+        DialoguePlayer.Instance.PlayDialogue(dialogues[currentDialogueIndex],transform.position, NextDialogue);
     }
 
     private void NextDialogue()

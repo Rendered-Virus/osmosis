@@ -60,6 +60,7 @@ public class GameManager : Singleton<GameManager>
             _dialogueSpeaker2.currentDialogueIndex,
             _dialogueSpeaker3.currentDialogueIndex };
         saveData.playerState = _playerState.currentState;
+        saveData.hat = PlayerHat.Instance.currentHat;
         SaveDataManager.Instance.SaveData(saveData);
     }
 
@@ -74,4 +75,5 @@ public class GlobalData
     public Vector3 globalPosition;
     public int[] dialogueIndices;
     public int playerState;
+    public int hat; // 0 for no hat, 1 for cat, 2 for cow
 }

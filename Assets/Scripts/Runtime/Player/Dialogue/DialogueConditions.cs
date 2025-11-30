@@ -24,6 +24,6 @@ public class DialogueConditions : Singleton<DialogueConditions>
 
     public void SetCondition(int condition)
     {
-       PlayerPrefs.SetInt(condition.ToString(), condition);
+       PlayerPrefs.SetInt(condition.ToString(), 1);
     }
 }
