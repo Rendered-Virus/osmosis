@@ -89,7 +89,7 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _DiffuseColor: {r: 0.2981131, g: 0.2981131, b: 0.2981131, a: 1}
+    - _DiffuseColor: {r: 0.19245279, g: 0.19245279, b: 0.19245279, a: 1}
     - _SpecularColour: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
