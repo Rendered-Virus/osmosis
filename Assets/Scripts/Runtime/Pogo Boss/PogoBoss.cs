@@ -39,6 +39,7 @@ public class PogoBoss : MonoBehaviour
       if(!_isFighting || _isDead)return;
       
       _timeToAttack = _timeBetweenAttacks;
+      StopAllCoroutines();
       StartCoroutine(JumpLoop());
    }
 
@@ -85,6 +86,9 @@ public class PogoBoss : MonoBehaviour
          {
             if (transform.position.y < 1)
             {
+               if(GameManager.Instance.playerDead)
+                  return;
+               
                _isDead = true;
                GameManager.Instance.BossDead();
                _onDeath?.Invoke();

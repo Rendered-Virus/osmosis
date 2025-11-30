@@ -129,5 +129,10 @@ public class PlayerMovement : MonoBehaviour
       _rigidbody2D.linearVelocity = Vector2.zero;
       _animator.SetBool("Run",false);
    }
+
+   public void SetMaxJumps(int maxJumps)
+   {
+      _jumpCount = maxJumps;
+   }
    public bool IsFacingRight() => _isFacingRight;
 }

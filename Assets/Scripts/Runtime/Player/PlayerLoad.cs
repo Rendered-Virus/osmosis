@@ -27,7 +27,6 @@ public class PlayerLoad : Singleton<PlayerLoad>
         if (data  != null)
         {
             transform.position = data.globalPosition;
-            GetComponent<PlayerState>().SetState(data.playerState);    
         }
     }
 }

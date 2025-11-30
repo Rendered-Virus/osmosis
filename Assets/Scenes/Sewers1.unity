@@ -4987,26 +4987,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 581881638897893297, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.6900005
-      objectReference: {fileID: 0}
-    - target: {fileID: 581881638897893297, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.2300003
-      objectReference: {fileID: 0}
-    - target: {fileID: 581881638897893297, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 581881638897893297, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 581881638897893297, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1148256033619182922, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.08
@@ -5059,78 +5039,6 @@ PrefabInstance:
       propertyPath: _textObject
       value: 
       objectReference: {fileID: 1504559146}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 7957826544768758159}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Stop
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: PlayerMovement, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: _onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6040399950773213719, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: orthographic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6040399950773213719, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: field of view
-      value: 60.000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 6040399950773213719, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: far clip plane
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6040399950773213719, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: orthographic size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043862816948014394, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: BlendUpdateMethod
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043862816948014394, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: DefaultBlend.Time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043862816948014394, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: DefaultBlend.Style
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043862816948014394, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-      propertyPath: LensModeOverride.Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5141,17 +5049,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1148256033619182922, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
   m_PrefabInstance: {fileID: 7957826544768758153}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7957826544768758159 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4082052758580600235, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
-  m_PrefabInstance: {fileID: 7957826544768758153}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afbfec07d2cd1148a0fc732d490e72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7957826544768758161 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7740734266442436232, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}

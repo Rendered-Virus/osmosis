@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private DialogueSpeaker _dialogueSpeaker1, _dialogueSpeaker2, _dialogueSpeaker3;
     [SerializeField] private PlayerState _playerState;
     public bool load;
+    public bool playerDead;
 
     protected override void Awake()
     {
@@ -39,12 +40,14 @@ public class GameManager : Singleton<GameManager>
     }
     public void DoRespawn()
     {
+        playerDead = true;
         _fadeImage.DOFade(1, _fadeDuration).OnComplete(Respawn);
     }
 
     private void Respawn()
     {
         OnRespawn?.Invoke();
+        playerDead = false;
         _fadeImage.DOFade(0, _fadeDuration);
     }
     
@@ -56,7 +59,7 @@ public class GameManager : Singleton<GameManager>
         saveData.dialogueIndices = new[] { _dialogueSpeaker1.currentDialogueIndex,
             _dialogueSpeaker2.currentDialogueIndex,
             _dialogueSpeaker3.currentDialogueIndex };
-            
+        saveData.playerState = _playerState.currentState;
         SaveDataManager.Instance.SaveData(saveData);
     }
 

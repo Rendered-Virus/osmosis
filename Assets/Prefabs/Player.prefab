@@ -318,7 +318,7 @@ MonoBehaviour:
   _speed: 100
   _midAirSpeed: 80
   _jumpForce: {x: 100, y: 1000}
-  _jumpCount: 2
+  _jumpCount: 1
   _extraGravity: 50
   _terminalVelocity: 50
   _groundCheckBox: {x: 0.61, y: 0.19}
@@ -343,6 +343,18 @@ MonoBehaviour:
   _onDialogueStart:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4082052758580600235}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4082052758580600235}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: set_enabled
@@ -397,6 +409,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  _stateModels:
+  - {fileID: 3306513786608111295}
+  - {fileID: 2332076330723759890}
+  _stateEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4082052758580600235}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: SetMaxJumps
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1904789607877412726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,7 +470,7 @@ Transform:
   m_GameObject: {fileID: 2805416270962767818}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6899996, y: 2.23, z: -8.65}
+  m_LocalPosition: {x: 2.6900005, y: 2.2300003, z: -8.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -565,13 +597,13 @@ MonoBehaviour:
   WorldUpOverride: {fileID: 0}
   ChannelMask: -1
   UpdateMethod: 0
-  BlendUpdateMethod: 1
+  BlendUpdateMethod: 0
   LensModeOverride:
     Enabled: 0
     DefaultMode: 2
   DefaultBlend:
-    Style: 1
-    Time: 2
+    Style: 4
+    Time: 1
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -725,7 +757,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 73433d52da180da459256930c6eb57f2, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73433d52da180da459256930c6eb57f2, type: 3}
       propertyPath: m_LocalScale.y
@@ -771,6 +803,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8627320864373718644, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 31d4ea7e506a6c342851b807e5e23996, type: 2}
+    - target: {fileID: -8627320864373718644, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b6fd13cf7008ec44ab8ad84568e94192, type: 2}
+    - target: {fileID: -8627320864373718644, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eee04feb7988ca6469463ca40e2b636b, type: 2}
+    - target: {fileID: -8627320864373718644, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 024982b14160b414a8582afa2b5a4365, type: 2}
+    - target: {fileID: -8627320864373718644, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b6fd13cf7008ec44ab8ad84568e94192, type: 2}
+    - target: {fileID: -5719423979153083793, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1206874426333947015, guid: 73433d52da180da459256930c6eb57f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -791,6 +847,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f2d8ec85caaf57e44a99301dc811c8d5, type: 2}
+    - target: {fileID: 5382080877467678099, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -831,3 +891,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2332076330723759890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5719423979153083793, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+  m_PrefabInstance: {fileID: 1224333825901356413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3306513786608111295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4819223349682164798, guid: 73433d52da180da459256930c6eb57f2, type: 3}
+  m_PrefabInstance: {fileID: 1224333825901356413}
+  m_PrefabAsset: {fileID: 0}
