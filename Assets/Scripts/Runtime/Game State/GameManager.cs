@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Transform _player;
     [SerializeField] private DialogueSpeaker _dialogueSpeaker1, _dialogueSpeaker2, _dialogueSpeaker3;
     [SerializeField] private PlayerState _playerState;
+    [SerializeField] private Dictionary<int, AudioClip> _musicTracks;
     public bool load;
     public bool playerDead;
 
@@ -21,11 +23,13 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
         load = SceneManager.GetActiveScene().buildIndex == 1;
+        SetMusic(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void Start()
     {
         _fadeImage.DOFade(0, _fadeDuration);
+   
     }
 
     public void EnterGlobalLevel()
@@ -62,6 +66,12 @@ public class GameManager : Singleton<GameManager>
         saveData.playerState = _playerState.currentState;
         saveData.hat = PlayerHat.Instance.currentHat;
         SaveDataManager.Instance.SaveData(saveData);
+    }
+
+    public void SetMusic(int i)
+    {
+        if(_musicTracks.TryGetValue(SceneManager.GetActiveScene().buildIndex, out var track))
+            AudioManager.Instance.PlayMusic(track);
     }
 
     public void BossDead()

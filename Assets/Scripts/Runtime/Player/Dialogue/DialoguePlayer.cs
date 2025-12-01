@@ -12,8 +12,15 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
    [SerializeField] private RectTransform _textBox;
    [SerializeField] private Vector2 _offset;
    
+   private AudioSource _textAudio;
+   
    [SerializeField] private UnityEvent _onDialogueStart,  _onDialogueEnd;
    private bool _playing;
+
+   private void Start()
+   {
+      _textAudio = GetComponent<AudioSource>(); 
+   }
    public void PlayDialogue(Dialogue dialogue, Vector2 pos, Action onSuccess)
    {
       if(_playing) return;
@@ -42,6 +49,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
       }
       foreach (var line in lines)
       {
+         _textAudio.enabled = true;
          _textObject.text = line;
          _textObject.maxVisibleCharacters = 0;
          
@@ -50,6 +58,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
             _textObject.maxVisibleCharacters = i;
             yield return new WaitForSeconds(_timeBetweenLetters);
          }
+         _textAudio.enabled = false;
          yield return new WaitUntil(()=> Input.GetKeyDown(KeyCode.Space));
       }
       _textBox.gameObject.SetActive(false);

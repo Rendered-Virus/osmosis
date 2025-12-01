@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
+public abstract class Singleton<T> : SerializedMonoBehaviour where T : Singleton<T>
 {
     protected static T instance;
 

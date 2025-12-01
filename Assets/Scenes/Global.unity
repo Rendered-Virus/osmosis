@@ -6109,6 +6109,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e470c4207719b8747897d6f04f52157e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 479510228}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e470c4207719b8747897d6f04f52157e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 479510229}
   m_SourcePrefab: {fileID: 100100000, guid: e470c4207719b8747897d6f04f52157e, type: 3}
 --- !u!1 &479510220 stripped
 GameObject:
@@ -6282,6 +6285,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 479510229}
+        m_TargetAssemblyTypeName: TargetCam, Assembly-CSharp
+        m_MethodName: Target
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &479510227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e470c4207719b8747897d6f04f52157e, type: 3}
@@ -6301,6 +6316,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tears: {fileID: 238384638}
   _cat: {fileID: 6040273013906164661}
+--- !u!114 &479510229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479510220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23db90e51bd35d4d8f24e9bcaddb7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cam: {fileID: 726722565}
 --- !u!1 &494491181
 GameObject:
   m_ObjectHideFlags: 0
@@ -6466,6 +6494,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5768765194392427819, guid: 004c9bc555ffd4c8db86e3eef4d15a9f, type: 3}
   m_PrefabInstance: {fileID: 724937005}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &726722565 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8768059067493019186, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+  m_PrefabInstance: {fileID: 7957826544768758153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730179877
 GameObject:
   m_ObjectHideFlags: 0
@@ -14088,6 +14127,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d57997579fd1c54fb19b71698bbbcd7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1673942841}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d57997579fd1c54fb19b71698bbbcd7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1673942843}
   m_SourcePrefab: {fileID: 100100000, guid: 7d57997579fd1c54fb19b71698bbbcd7, type: 3}
 --- !u!1 &1673942836 stripped
 GameObject:
@@ -14255,6 +14297,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1673942843}
+        m_TargetAssemblyTypeName: TargetCam, Assembly-CSharp
+        m_MethodName: Target
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1673942843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673942836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23db90e51bd35d4d8f24e9bcaddb7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cam: {fileID: 726722565}
 --- !u!4 &1684511228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6088870827078961400, guid: e470c4207719b8747897d6f04f52157e, type: 3}
@@ -14614,6 +14681,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bca436ddaca5b646bd85063a973e39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   _resetConditionsOnStart: 0
 --- !u!4 &1848435791
 Transform:
@@ -15252,10 +15328,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 1315251416582638703, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5045704104144435589, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.54094
@@ -15316,6 +15388,52 @@ PrefabInstance:
       propertyPath: _dialogueSpeaker3
       value: 
       objectReference: {fileID: 1673942838}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: 'serializationData.PrefabModifications.Array.data[0]'
+      value: '"path":"_musicTracks","value":{"$id":0,"$type":"System.Collections.Generic.Dictionary`2[[System.Int32,
+        mscorlib],[UnityEngine.AudioClip, UnityEngine.AudioModule]], mscorlib","comparer":{"$id":1,"$type":"System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib"},"$rlength":4,"$rcontent":[{"$k":1,"$v":$eref:0},{"$k":2,"$v":$eref:1},{"$k":3,"$v":$eref:1},{"$k":4,"$v":$eref:1}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: 'serializationData.PrefabModifications.Array.data[1]'
+      value: '"path":"_musicTracks.{1si}","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: 'serializationData.PrefabModifications.Array.data[2]'
+      value: '"path":"_musicTracks.{2si}","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: 'serializationData.PrefabModifications.Array.data[3]'
+      value: '"path":"_musicTracks.{3si}","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: 'serializationData.PrefabModifications.Array.data[4]'
+      value: '"path":"_musicTracks.{4si}","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: serializationData.ReferencedUnityObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: 'serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: cac6d816538d04b428037ded2ebca5c9, type: 3}
+    - target: {fileID: 6243324587837153197, guid: 066796f43a10a3445b4745d34bf8c868, type: 3}
+      propertyPath: 'serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: fa6f4ce9d7177f24cb5872da72971cc6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15384,6 +15502,7 @@ GameObject:
   - component: {fileID: 919132148149366655}
   - component: {fileID: 919132148149366654}
   - component: {fileID: 919132148149366656}
+  - component: {fileID: 919132148149366657}
   m_Layer: 7
   m_Name: Alien
   m_TagString: Untagged
@@ -15561,6 +15680,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 919132148149366657}
+        m_TargetAssemblyTypeName: TargetCam, Assembly-CSharp
+        m_MethodName: Target
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &919132148149366656
 Animator:
   serializedVersion: 7
@@ -15583,6 +15714,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &919132148149366657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148149366652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23db90e51bd35d4d8f24e9bcaddb7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cam: {fileID: 726722565}
 --- !u!1 &1098851269845140307
 GameObject:
   m_ObjectHideFlags: 0
@@ -21350,7 +21494,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1148256033619182922, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.59
+      value: 8.66
       objectReference: {fileID: 0}
     - target: {fileID: 1148256033619182922, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21392,6 +21536,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1904789607877412726, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 1904789607877412726, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+    - target: {fileID: 1972266157466368056, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+      propertyPath: FollowOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972266157466368056, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+      propertyPath: FollowOffset.z
+      value: -11.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
       propertyPath: _textBox
       value: 
@@ -21400,6 +21556,22 @@ PrefabInstance:
       propertyPath: _textObject
       value: 
       objectReference: {fileID: 1504559146}
+    - target: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2518379923760490173, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+    - target: {fileID: 6845672805286389037, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 6845672805286389037, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+    - target: {fileID: 7740734266442436232, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+      propertyPath: currentState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804870038325126580, guid: 7237cb9b32556a647abbd3e46b593294, type: 3}
+      propertyPath: LookAtOffset.x
+      value: -2.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

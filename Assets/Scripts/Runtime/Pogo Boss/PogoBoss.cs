@@ -29,7 +29,6 @@ public class PogoBoss : MonoBehaviour
    private void Start()
    {
       GameManager.Instance.OnRespawn.AddListener(BeginFighting);
-      
    }
 
    public void BeginSpeaking()

@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
    
    [SerializeField] private Vector2 _groundCheckBox;
    [SerializeField] private float _groundCheckOffset;
+   [SerializeField] private AudioClip _jumpSound;
    
    [Header("References")]
    [SerializeField] private Animator _animator;
@@ -92,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
    {
       _rigidbody2D.AddForceY(_jumpForce.y);
       _rigidbody2D.AddForceX(_jumpForce.x * (_facingRight ? 1 : -1));
+      AudioManager.Instance.PlaySfxWithPitchShift(_jumpSound,0.1f,0.3f);
    }
 
    private void IsGrounded()
