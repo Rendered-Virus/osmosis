@@ -7650,7 +7650,7 @@ PrefabInstance:
       objectReference: {fileID: 151156078}
     - target: {fileID: 7774350247225813581, guid: f7cee679941210d46bbad0a9eb026964, type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14318,7 +14318,7 @@ PrefabInstance:
       objectReference: {fileID: 151156078}
     - target: {fileID: 7774350247225813581, guid: f7cee679941210d46bbad0a9eb026964, type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21285,6 +21285,10 @@ PrefabInstance:
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 151156078}
+    - target: {fileID: 7774350247225813581, guid: f7cee679941210d46bbad0a9eb026964, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
-        load = SceneManager.GetActiveScene().buildIndex == 0;
+        load = SceneManager.GetActiveScene().buildIndex == 1;
     }
 
     private void Start()
@@ -30,7 +30,7 @@ public class GameManager : Singleton<GameManager>
 
     public void EnterGlobalLevel()
     {
-        _fadeImage.DOFade(1, _fadeDuration).OnComplete(()=>SceneManager.LoadScene(0));
+        _fadeImage.DOFade(1, _fadeDuration).OnComplete(()=>SceneManager.LoadScene(1));
     }
 
     public void EnterLevel(int level)
