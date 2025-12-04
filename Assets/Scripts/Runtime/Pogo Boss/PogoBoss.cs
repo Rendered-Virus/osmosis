@@ -22,6 +22,7 @@ public class PogoBoss : MonoBehaviour
    private int _currentJumpIndex = 2;
    [SerializeField] private UnityEvent _onDeath;
    [SerializeField] private GameObject _landParticles;
+   [SerializeField] private AudioClip _explostionSound, _warningSound;
    
    private bool _isFighting;
    private bool _isDead;
@@ -74,6 +75,7 @@ public class PogoBoss : MonoBehaviour
       
       _indicator.DOScale(_indicatorScale, _indicatorAnimationTime).OnComplete(() =>
       {
+         AudioManager.Instance.PlaySfxWithPitchShift(_warningSound,0.01f,1);
          _indicator.gameObject.SetActive(false);
          var targetPos = _player.position;
 
@@ -97,7 +99,7 @@ public class PogoBoss : MonoBehaviour
                return;
             }
             Instantiate(_landParticles, transform.position, Quaternion.identity);
-            
+            AudioManager.Instance.PlaySfxWithPitchShift(_explostionSound,0.1f,0.5f);
             _timeToAttack = _timeBetweenAttacks;
             StartCoroutine(JumpLoop());
          });

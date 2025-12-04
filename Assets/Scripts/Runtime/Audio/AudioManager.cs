@@ -43,5 +43,12 @@ public class AudioManager : Singleton<AudioManager>
         _musicSource.loop = true;
         _musicSource.Play();
     }
+    public void PlayMusic(AudioClip clip, float volume)
+    {
+        _musicSource.clip = clip;
+        _musicSource.volume = volume;
+        _musicSource.loop = true;
+        _musicSource.Play();
+    }
     
 }

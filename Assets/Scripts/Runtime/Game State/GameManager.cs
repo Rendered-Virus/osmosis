@@ -40,6 +40,11 @@ public class GameManager : Singleton<GameManager>
     public void EnterLevel(int level)
     {
         SaveData();
+        LoadScene(level);
+    }
+
+    public void LoadScene(int level)
+    {
         _fadeImage.DOFade(1, _fadeDuration).OnComplete(()=>SceneManager.LoadScene(level));
     }
     public void DoRespawn()
@@ -64,13 +69,12 @@ public class GameManager : Singleton<GameManager>
             _dialogueSpeaker2.currentDialogueIndex,
             _dialogueSpeaker3.currentDialogueIndex };
         saveData.playerState = _playerState.currentState;
-        saveData.hat = PlayerHat.Instance.currentHat;
         SaveDataManager.Instance.SaveData(saveData);
     }
 
     public void SetMusic(int i)
     {
-        if(_musicTracks.TryGetValue(SceneManager.GetActiveScene().buildIndex, out var track))
+        if(_musicTracks.TryGetValue(i, out var track))
             AudioManager.Instance.PlayMusic(track);
     }
 

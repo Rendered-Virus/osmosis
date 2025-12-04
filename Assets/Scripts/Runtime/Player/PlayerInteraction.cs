@@ -6,6 +6,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] private Vector2 _interactionArea;
     [SerializeField] private TextMeshProUGUI _interactionText;
+    [SerializeField] private AudioClip _sound;
     private Interactable _currentTarget;
     private void FixedUpdate()
     {
@@ -35,8 +36,11 @@ public class PlayerInteraction : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && _currentTarget)
+        if (Input.GetKeyDown(KeyCode.E) && _currentTarget)
+        {
             _currentTarget.Interact();
+            AudioManager.Instance.PlaySfxWithPitchShift(_sound,0.05f,0.7f);
+        }
     }
 
     private void OnDrawGizmosSelected()

@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
    {
       _rigidbody2D.AddForceY(_jumpForce.y);
       _rigidbody2D.AddForceX(_jumpForce.x * (_facingRight ? 1 : -1));
-      AudioManager.Instance.PlaySfxWithPitchShift(_jumpSound,0.1f,0.3f);
+      AudioManager.Instance.PlaySfxWithPitchShift(_jumpSound,0.1f,0.1f);
    }
 
    private void IsGrounded()

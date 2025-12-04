@@ -40,6 +40,6 @@ public class Alien : MonoBehaviour
         
         _cowModel.SetActive(true);
         
-        PlayerHat.Instance.RemoveHat();
+        CrossSceneLoading.Instance.RemoveHat();
     }
 }

@@ -1,39 +1,29 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class PlayerHat : Singleton<PlayerHat>
+public class PlayerHat : MonoBehaviour
 {
-    [SerializeField] private Transform _hatHolder;
-    [SerializeField] private GameObject[] _hats;
-    
-    public int currentHat;
+    [SerializeField] private MeshRenderer _hat;
 
     private void Start()
     {
-        var data = SaveDataManager.Instance.LoadData();
-        if(data != null)
-            SetHat(data.hat);
+        CrossSceneLoading.Instance.OnHatSet.AddListener(UpdateHat);
+        UpdateHat(CrossSceneLoading.Instance.CurrentHat);
     }
 
-    public void SetHat(int hat)
+    private void UpdateHat(HatData data)
     {
-        currentHat = hat;
-        UpdateHat();
-        PlayerPrefs.SetInt("hat", currentHat);
-    }
-
-    private void UpdateHat()
-    {
-        for (int i = 0; i < _hats.Length; i++)
+        if (data == null)
         {
-            _hats[i].SetActive(i == currentHat);
+            print("null HatData");
+            _hat.GetComponent<MeshFilter>().mesh = null;
+            return;
         }
-    }
-
-    public void RemoveHat()
-    {
-        currentHat = -1;
-        UpdateHat();
+        _hat.materials = data.Materials;
+        _hat.GetComponent<MeshFilter>().mesh = data.Mesh;
+        _hat.transform.eulerAngles = data.Rotation;
+        _hat.transform.localScale = data.Scale;
     }
 }

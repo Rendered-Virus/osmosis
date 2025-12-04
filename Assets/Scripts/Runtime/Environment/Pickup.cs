@@ -9,7 +9,7 @@ public class Pickup : MonoBehaviour
    {
       DialogueConditions.Instance.SetCondition(_condition);
       _playerInteraction.DestroyInteractable(GetComponent<Interactable>());
-      PlayerHat.Instance.SetHat(_condition - 1);
+      CrossSceneLoading.Instance.SetHat(transform.GetChild(0));
       Destroy(gameObject);
    }
 }
