@@ -26,4 +26,9 @@ public class PlayerHat : MonoBehaviour
         _hat.transform.eulerAngles = data.Rotation;
         _hat.transform.localScale = data.Scale;
     }
+
+    public void RemoveHat()
+    {
+        CrossSceneLoading.Instance.RemoveHat();
+    }
 }

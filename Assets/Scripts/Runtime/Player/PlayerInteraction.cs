@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction : Singleton<PlayerInteraction>
 {
     [SerializeField] private Vector2 _interactionArea;
     [SerializeField] private TextMeshProUGUI _interactionText;

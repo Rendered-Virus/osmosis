@@ -82,8 +82,8 @@ public class PogoBoss : MonoBehaviour
          var hit = Physics2D.Raycast(targetPos, Vector2.down, 50, LayerMask.GetMask("Ground"));
          if(hit)
             targetPos.y = hit.point.y;
-         if(targetPos.y < 3f)
-            targetPos.y = 0f;
+         if(targetPos.y < 4f)
+            targetPos.y = -1f;
          
          transform.DOMoveZ(targetPos.z,_jumpDuration *0.1f);
          transform.DOMoveX(targetPos.x,_jumpDuration).OnComplete(() =>
